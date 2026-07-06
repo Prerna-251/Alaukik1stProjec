@@ -1,0 +1,149 @@
+/*================ ABOUT ================*/
+
+#about {
+    padding: 100px 8%;
+}
+
+
+/* Book */
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 1100px;
+    margin: auto;
+    border: 6px solid var(--gold);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+/* Pages */
+
+.book-page {
+    background: var(--parchment);
+    padding: 45px;
+    min-height: 520px;
+    position: relative;
+}
+
+.left-page {
+    border-right: 3px dashed var(--gold);
+}
+
+.book-page::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 2px solid rgba(199, 154, 46, .35);
+    pointer-events: none;
+}
+
+.book-page h3 {
+    color: var(--maroon);
+    font-family: "Cinzel Decorative", serif;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.book-page p {
+    color: var(--ink);
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* Info */
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+    padding: 18px;
+    background: #f5ead0;
+    border-left: 6px solid var(--gold);
+    border-radius: 12px;
+    transition: .35s;
+}
+
+.info-box:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 20px rgba(199, 154, 46, .25);
+}
+
+.info-box span {
+    font-size: 2rem;
+}
+
+.info-box h4 {
+    color: var(--maroon);
+    margin-bottom: 6px;
+}
+
+.info-box p {
+    color: var(--ink);
+    margin: 0;
+}
+
+/*================ MOBILE =================*/
+
+@media (max-width: 768px) {
+
+    #about {
+        padding: 70px 20px;
+    }
+
+    .book {
+        grid-template-columns: 1fr;
+        border-width: 4px;
+    }
+
+    .left-page {
+        border-right: none;
+        border-bottom: 3px dashed var(--gold);
+    }
+
+    .book-page {
+        padding: 25px;
+        min-height: auto;
+    }
+
+    .book-page::before {
+        inset: 8px;
+    }
+
+    .book-page h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .book-page p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .info-box {
+        padding: 15px;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info-box span {
+        font-size: 1.6rem;
+    }
+
+    .info-box h4 {
+        font-size: 1rem;
+    }
+
+    .info-box p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+}

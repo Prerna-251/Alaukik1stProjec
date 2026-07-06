@@ -1,0 +1,64 @@
+/*================ EDUCATION ================*/
+
+#education{
+    padding:100px 8%;
+}
+
+.education-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+    margin-top:60px;
+}
+
+.edu-card{
+    background:var(--parchment);
+    border:3px solid var(--gold);
+    border-radius:18px;
+    padding:30px;
+    position:relative;
+    transition:.4s;
+    box-shadow:0 15px 25px rgba(0,0,0,.12);
+}
+
+.edu-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 18px 35px rgba(199,154,46,.35);
+}
+
+.edu-card::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:2px dashed rgba(199,154,46,.45);
+    pointer-events:none;
+}
+
+.edu-year{
+    display:inline-block;
+    background:var(--maroon);
+    color:var(--parchment);
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:.9rem;
+}
+
+.edu-icon{
+    font-size:3rem;
+    margin-bottom:18px;}
+.edu-card h3{
+    color:var(--maroon);
+    font-family:"Cinzel Decorative",serif;
+    margin-bottom:12px;
+}
+
+.edu-card h4{
+    color:var(--ink);
+    margin-bottom:15px;
+    font-weight:500;
+}
+
+.edu-card p{
+    color:var(--ink);
+}

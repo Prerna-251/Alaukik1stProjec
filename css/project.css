@@ -1,0 +1,96 @@
+/*================ PROJECTS ================*/
+
+#projects {
+    padding: 100px 8%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.project-card {
+    background: var(--parchment);
+    border: 3px solid var(--gold);
+    border-radius: 18px;
+    padding: 30px;
+    position: relative;
+    transition: .4s;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 2px dashed rgba(199, 154, 46, .5);
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 35px rgba(199, 154, 46, .35);
+}
+
+.project-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    color: var(--maroon);
+    margin-bottom: 15px;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.project-card p {
+    color: var(--ink);
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-stack span {
+    background: var(--gold);
+    color: var(--maroon-deep);
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.project-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.project-btns a {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: var(--maroon);
+    color: var(--parchment);
+    transition: .35s;
+}
+
+.project-btns a:last-child {
+    background: transparent;
+    color: var(--maroon);
+    border: 2px solid var(--maroon);
+}
+
+.project-btns a:hover {
+    background: var(--gold);
+    color: var(--maroon-deep);
+}

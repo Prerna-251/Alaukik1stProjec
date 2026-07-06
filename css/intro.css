@@ -1,0 +1,566 @@
+/* ==========================================
+            RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --bg: #0E0C14;
+  --bg-dark: #07060A;
+
+  --gold: #C79A2E;
+  --gold-light: #E8C969;
+
+  --maroon: #502F4C;
+  --purple: #70587C;
+  --lavender: #C8B8DB;
+
+  --text: #ECE0BD;
+  --white: #F9F4F5;
+}
+
+/* ==========================================
+                BODY
+========================================== */
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    radial-gradient(circle at top,
+      #502F4C 0%,
+      #221A13 40%,
+      #0E0C14 75%,
+      #07060A 100%);
+
+  color: var(--text);
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* ==========================================
+            MAGIC GLOW
+========================================== */
+
+.magic-glow {
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle,
+      rgba(112, 88, 124, .18),
+      rgba(80, 47, 76, .12),
+      transparent 70%);
+
+  animation: magicGlow 6s ease-in-out infinite;
+}
+
+@keyframes magicGlow {
+
+  0%,
+  100% {
+
+    opacity: .45;
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    opacity: .9;
+    transform: scale(1.08);
+
+  }
+
+}
+
+/* ==========================================
+                STARS
+========================================== */
+
+.stars {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    radial-gradient(circle, #E8C969 1px, transparent 1.5px);
+
+  background-size: 65px 65px;
+
+  opacity: .12;
+
+  animation: twinkle 6s ease-in-out infinite;
+
+}
+
+@keyframes twinkle {
+
+  50% {
+
+    opacity: .28;
+
+  }
+
+}
+
+/* ==========================================
+              FLOATING PARTICLES
+========================================== */
+
+#particles {
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+}
+
+.particle {
+
+  position: absolute;
+
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--gold-light);
+
+  box-shadow:
+    0 0 10px var(--gold-light),
+    0 0 20px rgba(232, 201, 105, .5);
+
+  animation: floatUp linear forwards;
+
+}
+
+@keyframes floatUp {
+
+  from {
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+  }
+
+  to {
+
+    transform: translateY(-150px);
+
+    opacity: 0;
+
+  }
+
+}
+
+/* ==========================================
+              CURSOR GLOW
+========================================== */
+
+#cursor-glow {
+
+  position: fixed;
+
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+
+  background: rgba(232, 201, 105, .25);
+
+  box-shadow:
+    0 0 20px rgba(232, 201, 105, .5),
+    0 0 45px rgba(199, 154, 46, .35);
+
+  z-index: 9999;
+
+}
+
+/* ==========================================
+                INTRO
+========================================== */
+
+.intro {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  height: 100vh;
+
+  padding: 20px;
+
+}
+
+/* ==========================================
+          INTRO CONTENT
+========================================== */
+
+.intro-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  animation: fadeIn 1.2s ease;
+
+}
+
+.intro-content::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+
+  height: 550px;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(circle,
+      rgba(112, 88, 124, .18),
+      rgba(80, 47, 76, .08),
+      transparent 70%);
+
+  filter: blur(35px);
+
+  z-index: -1;
+
+}
+
+/* ==========================================
+            FEATHER
+========================================== */
+
+.feather {
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+
+  animation: feather 4s ease-in-out infinite;
+
+}
+
+@keyframes feather {
+
+  0%,
+  100% {
+
+    transform: translateY(0) rotate(-5deg);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px) rotate(5deg);
+
+  }
+
+}
+
+/* ==========================================
+              WELCOME
+========================================== */
+
+.welcome {
+
+  color: var(--lavender);
+
+  text-transform: uppercase;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 20px;
+
+  font-size: .95rem;
+
+}
+
+/* ==========================================
+                NAME
+========================================== */
+
+#typing-name {
+
+  font-family: 'Cinzel', serif;
+
+  font-size: clamp(2.8rem, 7vw, 5rem);
+
+  color: var(--gold-light);
+
+  min-height: 90px;
+
+  text-shadow:
+
+    0 0 10px rgba(232, 201, 105, .4),
+
+    0 0 25px rgba(199, 154, 46, .3);
+
+}
+
+/* ==========================================
+            SUBTITLE
+========================================== */
+
+.intro h2 {
+
+  margin-top: 18px;
+
+  color: var(--text);
+
+  font-weight: 500;
+
+  font-size: 1.5rem;
+
+}
+
+/* ==========================================
+                QUOTE
+========================================== */
+
+.quote {
+
+  max-width: 650px;
+
+  margin: 28px auto;
+
+  color: var(--lavender);
+
+  line-height: 1.9;
+
+  font-style: italic;
+
+  font-size: 1.05rem;
+
+}
+
+/* ==========================================
+            WAND DIVIDER
+========================================== */
+
+.wand-divider {
+
+  margin: 35px 0;
+
+  color: var(--gold-light);
+
+  letter-spacing: 4px;
+
+  opacity: .8;
+
+}
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+#enter-btn {
+
+  margin-top: 12px;
+
+  padding: 15px 42px;
+
+  border-radius: 50px;
+
+  border: 2px solid var(--gold);
+
+  background: transparent;
+
+  color: var(--gold-light);
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: .35s;
+
+  box-shadow:
+    0 0 15px rgba(199, 154, 46, .15);
+
+}
+
+#enter-btn:hover {
+
+  background:
+
+    linear-gradient(135deg,
+
+      var(--gold),
+
+      var(--gold-light));
+
+  color: #221A13;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+
+    0 0 30px rgba(232, 201, 105, .45);
+
+}
+
+/* ==========================================
+            SKIP TEXT
+========================================== */
+
+.skip-text {
+
+  margin-top: 22px;
+
+  color: var(--lavender);
+
+  font-size: .95rem;
+
+  opacity: .85;
+
+}
+
+/* ==========================================
+            CASTLE SHADOW
+========================================== */
+
+.castle-shadow {
+
+  position: fixed;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  height: 170px;
+
+  background:
+
+    linear-gradient(to top,
+
+      #07060A,
+
+      rgba(14, 12, 20, .85),
+
+      transparent);
+
+  opacity: .95;
+
+}
+
+/* ==========================================
+            FADE ANIMATIONS
+========================================== */
+
+.fade-out {
+
+  animation: fadeOut .8s forwards;
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+@keyframes fadeOut {
+
+  to {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+  }
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:768px) {
+
+  #typing-name {
+
+    font-size: 2.6rem;
+
+    min-height: 70px;
+
+  }
+
+  .intro h2 {
+
+    font-size: 1.2rem;
+
+  }
+
+  .quote {
+
+    font-size: .95rem;
+
+    padding: 0 15px;
+
+  }
+
+  #enter-btn {
+
+    width: 100%;
+
+    max-width: 280px;
+
+  }
+
+}
