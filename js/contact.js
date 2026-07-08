@@ -1,7 +1,5 @@
 function initContactForm() {
 
-    console.log("initContactForm called");
-
     const form = document.getElementById("contact-form");
     const sendBtn = document.getElementById("sendBtn");
 
