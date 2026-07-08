@@ -141,13 +141,60 @@ header {
     width: 100%;
 }
 
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    color:var(--gold-light);
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        width:92%;
+        padding:15px 0;
+    }
+
+    .logo{
+        font-size:1.6rem;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:var(--maroon);
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        padding:25px 0;
+
+        transform:translateY(-20px);
+        opacity:0;
+        visibility:hidden;
+        transition:.4s;
+        border-top:2px solid var(--gold);
+    }
+
+    .nav-links.active{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+    }
+}
+
 /* ================= HERO SECTION ================= */
 
 .hero {
-    min-height: 100vh;
+    min-height:100vh;
     display: flex;
     align-items: center;
-    padding: 100px  60px;
+    padding:80px 80px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -157,7 +204,7 @@ header {
     display: grid;
     grid-template-columns: 1.15fr .85fr;
     align-items: center;
-    gap: 80px;
+    gap: 50px;
 }
 
 /* LEFT SIDE */
@@ -183,8 +230,8 @@ header {
 }
 
 .hero-title {
-    font-size: 4rem;
-    line-height: 1.0;
+    font-size: 3.3rem;
+    line-height: 0.95;
     margin-bottom: 10px;
     color: var(--ink);
 }
@@ -213,9 +260,9 @@ header {
 .hero-desc {
     max-width: 620px;
     font-size: 1.05rem;
-    line-height: 2;
+    line-height: 1.7;
     color: #4a4034;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 /* CTA BUTTONS */
@@ -223,7 +270,7 @@ header {
 .hero-actions {
     display: flex;
     gap: 18px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -266,7 +313,7 @@ header {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 .social-card {
@@ -355,8 +402,8 @@ header {
 
 .image-frame {
     position: relative;
-    width: 430px;
-    height: 430px;
+    width: 360px;
+    height: 360px;
     overflow: hidden;
     border-radius: 50%;
     border: 8px solid var(--gold);

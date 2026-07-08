@@ -15,13 +15,19 @@
     margin: auto;
     border: 6px solid var(--gold);
     border-radius: 15px;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
+    perspective: 2000px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+    perspective: 1500px;
+    transform-style: preserve-3d;
 }
 
 /* Pages */
 
 .book-page {
+    width: 100%;
+    height: 100%;
     background: var(--parchment);
     padding: 45px;
     min-height: 520px;

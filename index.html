@@ -15,9 +15,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/contact.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
 </head>
 
 <body>
@@ -27,7 +28,10 @@
     <header>
         <nav class="navbar">
             <h2 class="logo"><span>PG</span></h2>
-            <ul class="nav-links">
+            <div id="menu-toggle" class="menu-toggle">
+                ☰
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -177,7 +181,12 @@
     <!--------- CONTACT ME  --------->
     <div id="contact-section"></div>
 
-    <script src="../js/script.js"> </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/animations.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
