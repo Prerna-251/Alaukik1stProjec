@@ -65,10 +65,8 @@ function enterPortfolio() {
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-
-        window.location.href = "index.html";
-
-    }, 800);
+        window.location.href = "home.html";
+    }, 4000);
 
 }
 
@@ -155,7 +153,7 @@ console.log("✨ Welcome to Prerna's Magical Portfolio ✨");
 
 // Prevent Text Selection
 
-document.addEventListener("selectstart", function(e){
+document.addEventListener("selectstart", function (e) {
 
     e.preventDefault();
 
@@ -165,9 +163,9 @@ document.addEventListener("selectstart", function(e){
 
 // Escape Key Skips Intro
 
-document.addEventListener("keydown", function(e){
+document.addEventListener("keydown", function (e) {
 
-    if(e.key === "Escape"){
+    if (e.key === "Escape") {
 
         clearInterval(timer);
 
