@@ -66,7 +66,7 @@ function enterPortfolio() {
 
     setTimeout(() => {
         window.location.href = "home.html";
-    }, 4000);
+    }, 1000);
 
 }
 
